@@ -1,3 +1,4 @@
+#![allow(unused)]
 mod global_value_manager;
 mod global_value_mut;
 mod global_value;
