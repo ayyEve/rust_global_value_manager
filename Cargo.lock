@@ -89,7 +89,7 @@ dependencies = [
 
 [[package]]
 name = "global_value_manager"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "crossbeam",
  "lazy_static",

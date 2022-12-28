@@ -1,12 +1,16 @@
-#![allow(unused)]
+
 mod global_value_manager;
 mod global_value_mut;
 mod global_value;
 mod global_entry;
-mod prelude;
+pub mod prelude;
+
+
+pub use global_value::GlobalValue;
+pub use global_value_mut::GlobalValueMut;
+pub use global_value_manager::GlobalValueManager;
 
 use prelude::*;
-
 lazy_static::lazy_static! {
     pub(crate) static ref MANAGER: ShardedLock<HashMap<TypeId, Entry>> = Default::default();
 }
@@ -14,6 +18,7 @@ lazy_static::lazy_static! {
 
 
 mod test {
+    #[allow(unused)]
     use super::prelude::*;
 
     #[test]
